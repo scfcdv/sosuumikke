@@ -1,0 +1,18 @@
+<title>素数判定</title>
+<link rel="icon" href="favicon.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+function isPrime(number) {
+for (var i = 2; i <= Math.sqrt(number); i++) {
+if (number % i === 0) {
+return false;}}
+return true;}
+function checkPrime() {
+var number = $("#number").val();
+if (isPrime(number)) {
+alert("素数です");
+} else {
+alert("素数ではありません");}}
+</script>
+<input type="number" id="number" />
+<input type="button" value="チェック" onclick="checkPrime()" />
